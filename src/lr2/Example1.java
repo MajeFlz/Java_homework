@@ -1,6 +1,5 @@
 package lr2;
 
-import java.util.Arrays;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -19,10 +18,20 @@ public class Example1 {
             System.out.println("Элемент массива ["+i+"] = " + nums[i]);
         }
 
-        Arrays.sort(nums);
-        System.out.print("Проведена сортировка массива: ");
+        // Поиск минимального значения без сортировки массива
+        int minNum = Integer.MAX_VALUE;
+        for (int num : nums) {
+            if (num < minNum) {
+                minNum = num;
+            }
+        }
+
+        System.out.println("Минимальное значение: " + minNum);
+        System.out.print("Индекс(ы) элемента(ов) с минимальным значением: ");
         for (int i = 0; i < nums.length; i++) {
-            System.out.print("Элемент массива ["+i+"] после сортировки = " + nums[i]);
+            if (nums[i] == minNum) {
+                System.out.print(i + " ");
+            }
         }
     }
 }
