@@ -37,7 +37,7 @@ public class Example4 {
         }
 
         public static void main(String[] args) {
-            Person person1 = new Person("Alice", 30, "female");
+            Person person1 = new Person("Petya", 35, "male");
             System.out.println("Name: " + person1.getName());
             System.out.println("Age: " + person1.getAge());
             System.out.println("Gender: " + person1.getGender());
